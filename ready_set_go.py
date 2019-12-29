@@ -21,7 +21,6 @@ def get_bucket_count():
     try:
         no_of_buckets_l = len(list(s3.buckets.all()))
         bucket_list = list(s3.buckets.all())
-        print(bucket_list[0].name)
         for bucket in bucket_list:
             print(bucket.name)
         return no_of_buckets_l
