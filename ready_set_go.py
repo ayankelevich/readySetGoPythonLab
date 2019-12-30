@@ -5,6 +5,7 @@ import boto3
 from botocore.exceptions import NoCredentialsError, ClientError
 import sys
 
+
 def get_bucket_count():
     print("============================================")
     print("Welcome to the AWS Boto3 SDK! Ready, Set, Go!")
@@ -25,6 +26,7 @@ def get_bucket_count():
     except ClientError as ex:
         print(ex)
         return 0
+
 
 ####################  Main #############
 
