@@ -33,4 +33,4 @@ def get_bucket_count():
 
 if __name__ == '__main__':
     no_of_buckets = get_bucket_count()
-    print("You have", str(no_of_buckets), "Amazon S3 buckets.")
+    print("You have %s  %s" % (str(no_of_buckets), "Amazon S3 buckets."))
