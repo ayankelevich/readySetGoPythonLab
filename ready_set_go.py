@@ -5,8 +5,6 @@ import boto3
 from botocore.exceptions import NoCredentialsError, ClientError
 import sys
 
-# Before running the code, check that the ~/.aws/credentials file contains your credentials.
-
 def get_bucket_count():
     print("============================================")
     print("Welcome to the AWS Boto3 SDK! Ready, Set, Go!")
@@ -17,13 +15,13 @@ def get_bucket_count():
     except NoCredentialsError:
         print("@InvalidCredentials")
         sys.exit()
+
     try:
         no_of_buckets_l = len(list(s3.buckets.all()))
         bucket_list = list(s3.buckets.all())
         for bucket in bucket_list:
             print(bucket.name)
         return no_of_buckets_l
-
     except ClientError as ex:
         print(ex)
         return 0
