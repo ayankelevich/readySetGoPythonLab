@@ -29,6 +29,8 @@ def get_bucket_count():
         return 0
 
 ####################  Main #############
+
+
 if __name__ == '__main__':
     no_of_buckets = get_bucket_count()
     print("You have", str(no_of_buckets), "Amazon S3 buckets.")
