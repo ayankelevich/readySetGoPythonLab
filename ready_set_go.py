@@ -17,7 +17,6 @@ def get_bucket_count():
     except NoCredentialsError:
         print("@InvalidCredentials")
         sys.exit()
-
     try:
         no_of_buckets_l = len(list(s3.buckets.all()))
         bucket_list = list(s3.buckets.all())
@@ -29,7 +28,7 @@ def get_bucket_count():
         print(ex)
         return 0
 
-
+####################  Main #############
 if __name__ == '__main__':
     no_of_buckets = get_bucket_count()
     print("You have", str(no_of_buckets), "Amazon S3 buckets.")
